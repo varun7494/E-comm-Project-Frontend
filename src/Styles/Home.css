@@ -1,0 +1,29 @@
+.card{
+    display : inline-block;
+    border: none;
+    width : 100%;
+    height : auto;
+    margin-right : 18.6354px;
+    margin-bottom: 18.6354px;
+}
+
+body{
+    line-height: 1;
+    background-color: whitesmoke ;
+}
+
+.card-img-top{
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: auto;
+    position: relative;
+    
+}
+
+.container{
+    width : 100%;
+    margin-top: 0%;
+    border: none;
+    
+}
