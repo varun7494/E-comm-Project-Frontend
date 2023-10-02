@@ -16,6 +16,7 @@ function Register(){
         mobile : "",
         email : "",
         password : "",
+        pincode : "",
         address : "",
         gender : "male",
 
@@ -71,43 +72,61 @@ function Register(){
 
     return(
         <>
-        <div className="container">
-        {/* <form> */}
+        <section class="h-100 h-custom" style={{backgroundColor : "#8fc4b7" }}>
+        <div class="container px-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+        <img src="https://img.freepik.com/free-vector/e-commerce-illustration_1168-341.jpg?t=st=1694707594~exp=1694708194~hmac=0eb2a2b45833d7f6a167f6140397412665ae206150d4e637fdfe145d48e5a7c7"
+            class="w-100 h-10"  alt="Sample photo"/>
+            <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration</h3>
+
+            <form class="px-md-2">
         <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" name="name" onChange={handleInputs} class="form-control" id="exampleInputEmail1" placeholder="Enter your name"/>
+                <label for="exampleInputEmail1"></label>
+                <input type="text" name="name" onChange={handleInputs} class="form-control" id="exampleInputEmail1" placeholder="Full Name"/>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name='email' onChange={handleInputs} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="exampleInputEmail1"></label>
+                <input type="email" name='email' onChange={handleInputs} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address"/>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Mobile</label>
-                <input type="number" name='mobile' onChange={handleInputs} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter mobile number"/>
+                <label for="exampleInputEmail1"></label>
+                <input type="tel" name='mobile' onChange={handleInputs} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile number"/>
             </div>
             <div class="form-group">
-            <label for="exampleInputEmail1">Address</label>
-                <input type="text" name="address" onChange={handleInputs} class="form-control" id="exampleInputEmail1" placeholder="Enter your address"/>
+                <label for="exampleInputEmail1"></label>
+                <input type="number" name='pincode' onChange={handleInputs} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pincode"/>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Gender</label>
-                <select onChange={handleGenderSelect} classs = "form-control">
+            <label for="exampleInputEmail1"></label>
+                <input type="text" name="address" onChange={handleInputs} class="form-control" id="exampleInputEmail1" placeholder="Address"/>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <select onChange={handleGenderSelect} class="form-control">
                     <option>Male</option>
                     <option>Female</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="text" name="password" onChange={handleInputs} class="form-control" id="exampleInputPassword1" placeholder="Enter Valid Password"/>
+                <label for="exampleInputPassword1"></label>
+                <input type="text" name="password" onChange={handleInputs} class="form-control" id="exampleInputPassword1" placeholder="Password"/>
             </div>
-                <div class="form-group form-check">
-                <h4>Already have an account <Link to='/login'>Login here</Link></h4>
+            <div class="form-group">
+            <h5>Already have an account <Link to='/login'>Login here</Link></h5>
             </div>
-                <button type="submit" onClick={handleSubmit} class="btn btn-primary">Submit</button>
-        {/* </form> */}
+            <div>
+            <button type="submit" onClick={handleSubmit} class="btn btn-success btn-lg mb-1">Submit</button>
+            </div>
+        </form>
         </div>
-        
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
         </>
     )
 }

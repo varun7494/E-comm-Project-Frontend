@@ -18,8 +18,8 @@ function ViewProduct () {
             <p class="card-text"><span style={{color : 'red' ,fontWeight : "bold" ,fontSize : "15px"}}>{`-${state.discount}`}</span><span style = {{marginLeft : 10 ,fontSize : 20}}></span><span></span></p>
             <p class="card-text">M.R.P. <span>&#x20B9; </span><del>{state.price}</del></p>
             {/* <a onClick={()=>{handleViewMore(el)}} href="#" class="btn btn-primary" style = {{marginRight : 10}}>View More</a> */}
-            <a class="btn btn-primary">Buy Now</a>
-            <a class="btn btn-success">ADD To Cart</a>
+            <button class="btn btn-primary">Buy Now</button>
+            <button class="btn btn-success">ADD To Cart</button>
         </div>
         </div>
         

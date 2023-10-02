@@ -1,7 +1,8 @@
-.container{
-    width: 60%;
-    margin: auto;
-    border: 1px solid blue;
-    padding: 20px;
-    margin-top: 100px;
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background-color: #eee;
 }
+

@@ -9,6 +9,7 @@ function Home({color}){
     const navigate = useNavigate()
 
     var [data , setData] = useState([])
+    
 
     function getProductsData(){
 
@@ -24,9 +25,9 @@ function Home({color}){
             {
                 for(let j = 0 ; j < cart_arr.length ; j++ )
                 {
-                    if(prod_arr[i]._id == cart_arr[j].p_id)
+                    if(prod_arr[i]._id === cart_arr[j].p_id)
                     {
-                    prod_arr[i] ['disable'] = true
+                    prod_arr[i]['disable'] = true
                     }
                 }
             }
@@ -78,23 +79,21 @@ function Home({color}){
             
 
     }
+    
 
 
 
     return(
         <>
-        <div class="container">
-        <div class="column">
-        <div class="col-8">
         {Array.isArray(data) && data.length > 0 ?
         <>
         {data.map((el,i)=>(
-
+            
             <div class="card bg-light mb-3" style={{width: "18rem" }}>
             <img class="card-img-top bg-light mb-3" src={el.image} alt="Card image cap" />
             <div class="card-body">
                 <h5 class="card-title">{el.p_name}</h5>
-                <p class="card-text"><span style={{color : 'red' ,fontWeight : "bold" ,fontSize : "15px"}}>{`-${el.discount}%`}</span><span style = {{marginLeft : 10 ,fontSize : 20}}>&#x20B9; </span>{(el.price - (el.discount / 100) * el.price)} <span></span></p>
+                <p class="card-text"><span style={{color : 'red' ,fontWeight : "bold" ,fontSize : "15px"}}>{`-${el.discount}%`}</span><span style = {{marginLeft : 10 ,fontSize : 20}}>&#x20B9; </span>{el.price - ((el.discount / 100) * el.price)} <span></span></p>
                 <p class="card-text">M.R.P. <span>&#x20B9;</span><del>{el.price}</del></p>
                 <a onClick={()=>{handleViewMore(el)}} class="btn btn-primary" style = {{marginRight : 10}}>View More</a>
                 <button disabled={el.disable == true ? true : false} onClick={()=>{addToCart(el)}}  class="btn btn-success">{el.disable == true ? "Already Added" : "Add To Cart"}</button>
@@ -105,9 +104,6 @@ function Home({color}){
         
         
         </> : null }
-        </div>
-        </div>
-        </div>
         </>
     )
 
